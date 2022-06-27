@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <Script src="Elettronica.js"></Script>
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1 class="titolo">Calcoli elettronica</h1>
+
+    <h2 class="sottotitolo">Questo è un tool per calcolare resistenza (in Ohm), tensione (in Volt) e intensità di corrente (in Ampere)</h2>
+
+    <h3 class="sottotitolo"><span>NB: Per il momento il tool funziona solo con circuiti con componenti disposti in serie.</span></h3>
+
+    <h3 class="sottotitolo">Conversioni:</h4>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <div class="divConv">
+
+        <div class="divmA">
+
+            <p class="paragrafoC"> mA to A: </p>
+
+            <td> <input type="text" id="mA"> </td> 
+            <input type="button" onclick="mA_to_A()" value="Converti">
+            <p id="AConv"></p>
+            <p class="span2">Fai i mA/1000</p>
+
+        </div>
+    
+    </div>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <br>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <div class="divConv">
+
+        <div class="divA">
+
+            <p class="paragrafoC"> A to mA: </p>
+
+            <td> <input type="text" id="A"> </td>
+            <input type="button" onclick="A_to_mA()" value="Converti">
+            <p id="mAConv"></p>
+            <p class="span2">Fai i A*1000</p>
+
+        </div>
+
+    </div>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <br>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <div class="divConv">
+
+        <div class="divmV">
+
+            <p class="paragrafoC"> mV to V: </p>
+
+            <td> <input type="text" id="mV"> </td>
+            <input type="button" onclick="mV_to_V()" value="Converti">
+            <p id="VConv"></p>
+            <p class="span2">Fai i mV/1000</p>
+
+        </div>
+
+    </div>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <br>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <div class="divConv">
+
+        <div class="divV">
+
+            <p class="paragrafoC"> V to mV: </p>
+
+            <td> <input type="text" id="V"> </td>
+            <input type="button" onclick="V_to_mV()" value="Converti">
+            <p id="mVConv"></p>
+            <p class="span2">Fai i V*1000</p>
+
+        </div>
+
+    </div>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <br>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <div class="divConv">
+
+        <div class="divΩ">
+
+            <p class="paragrafoC"> Ω to KΩ: </p>
+
+            <td> <input type="text" id="ohm"> </td>
+            <input type="button" onclick="ohm_to_kohm()" value="Converti">
+            <p id="kohmConv"></p>
+            <p class="span2">Fai i Ω/1000</p>
+
+        </div>
+
+    </div>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <br>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <div class="divConv">
+
+        <div class="divKΩ" >
+
+            <p class="paragrafoC"> KΩ to Ω: </p>
+
+            <td> <input type="text" id="Kohm"> </td>
+            <input type="button" onclick="kohm_to_ohm()" value="Converti">
+            <p id="ohmConv"></p>
+            <p class="span2">Fai i KΩ*1000</p>
+
+        </div>
+
+    </div>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+<br>
+
+<h3 class="sottotitolo">Calcolo resistenza, tensione, intensità di corrente:</h4>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+    <div class="divConv">
+
+        <div class="divResistenza">
+
+            <p class="paragrafoC"> <b> Resistenza: </b> </p>
+
+            <td> <b> V = </b> <input type="text" id="VlOhm"></td>
+            <p></p>
+            <td> <b> I = </b> <input type="text" id="IlOhm"></td>
+            <p><input type="button" onclick="getResistenza()" value="Calcola"></p>
+            <b><p id="Resistenza"></p></b>
+
+        </div>
+
+    </div>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+<div class="divConv">
+
+    <div class="divTensione">
+
+        <p class="paragrafoC"> <b> Tensione: </b> </p>
+
+        <td> <b> R = </b> <input type="text" id="RlOhm"></td>
+        <p></p>
+        <td> <b> I = </b> <input type="text" id="IlOhm2"></td>
+        <p><input type="button" onclick="getTensione()" value="Calcola"></p>
+        <b><p id="Tensione"></p></b>
+
+    </div>
+
+</div>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+<div class="divConv">
+
+    <div class="divCorrente">
+
+        <p class="paragrafoC"> <b> Corrente: </b> </p>
+
+        <td> <b> V = </b> <input type="text" id="VlOhm2"></td>
+        <p></p>
+        <td> <b> R = </b> <input type="text" id="RlOhm2"></td>
+        <p><input type="button" onclick="getCorrente()" value="Calcola"></p>
+        <b><p id="Corrente"></p></b>
+
+    </div>
+
+</div>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+<br>
+<br>
+
+<div class="divConv">
+
+    <div class="divQuanta_resistenza">
+
+        <p class="paragrafoC"> <b> Calcola quale resistore ti serve: </b> </p>
+
+        <td> <b> Scrivi quanta tensione esce dal tuo generatore (in serie): </b> <input type="text" id="Ve"></td>
+        <p></p>
+        <td> <b> Scrivi quanta tensione assorbe il tuo componente (in serie): </b> <input type="text" id="VlOhm3"></td>
+        <p></p>
+        <td> <b> Scrivi quanta intensità di corrente assorbe il tuo componente (in serie e in Ampere): </b> <input type="text" id="IlOhm3"></td>
+        <p><input type="button" onclick="Resistenza()" value="Calcola"></p>
+        <b><p id="quanta_resistenza"></p></b>
+
+    </div>
+
+</div>
+
+<!-------------------------------------------------------------------------------------------------------->
+    
+</body>
+</html>
