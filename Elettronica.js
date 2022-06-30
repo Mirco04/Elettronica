@@ -112,7 +112,7 @@ function Tensione(){
 
     let VeTemp = (R*Ia);
 
-    let Ve = (VeTemp) +  (Va);
+    let Ve = (VeTemp) +  parseInt(Va);
 
     document.getElementById('quanta_tensione').innerHTML = Ve + ' ' + 'V';
 
