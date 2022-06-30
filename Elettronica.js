@@ -104,4 +104,19 @@ function Resistenza(){
 
 }
 
+function Tensione(){
+
+    let Ia = document.getElementById('Ia').value;
+    let R = document.getElementById('Rlohm3').value;
+    let Va = document.getElementById('Va').value;
+
+    let VeTemp = (R*Ia);
+
+    let Ve = (VeTemp) +  (Va);
+
+    document.getElementById('quanta_tensione').innerHTML = Ve + ' ' + 'V';
+
+
+}
+
 
