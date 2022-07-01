@@ -130,4 +130,16 @@ function Corrente(){
 
 }
 
+function Partirore(){
+
+    let V = document.getElementById('V_partitore').value;
+    let R1 = document.getElementById('R1').value;
+    let R2 = document.getElementById('R2').value;
+
+    let Vr = (R1 /(R1+R2)) * V;
+    
+    document.getElementById('partitore').innerHTML
+
+}
+
 

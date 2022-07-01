@@ -16,7 +16,7 @@
 
     <h3 class="sottotitolo"><span>NB: Per il momento il tool funziona solo con circuiti con componenti disposti in serie.</span></h3>
 
-    <h3 class="sottotitolo">Conversioni:</h4>
+    <h3 class="sottotitolo">Conversioni:</h3>
 
 <!-------------------------------------------------------------------------------------------------------->
 
@@ -268,6 +268,27 @@
     </div>
 
 </div>
+
+<!-------------------------------------------------------------------------------------------------------->
+
+<br>
+<br>
+    <h3 class="sottotitolo">Partitore di tensione:</h3>
+
+    <h3 class="sottotitolo"><span>NB: Per la regola del partitore le resistenze devono essere disposte in serie.</span></h3>
+
+    <br>
     
+    <h3 class="sottotitolo"><span>NB: Se il circuito è composto da solo due resistori sarà necessario inserire solo il valore del secondo resistore in "R2", se ci fossero più di due resistori "R2" dovrà essere la somma delle resistenze disposte in serie nel circuito.</span></h3>
+<!-------------------------------------------------------------------------------------------------------->
+    <div class="divConv">
+        <td> <b> Resistenza interessata "R1": </b> <input type="number" id="R1"> Ω</td>
+        <p></p>
+        <td> <b> Resistenza/e "R2":   </b> <input type="number" id="R2"> Ω</td>
+        <p></p>
+        <td> <b> Tensione "V":   </b> <input type="number" id="V_partitore"> V</td>
+        <b><p id="partitore"></p></b>
+    </div>
+
 </body>
 </html>
