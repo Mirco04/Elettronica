@@ -130,15 +130,18 @@ function Corrente(){
 
 }
 
-function Partirore(){
+function Partitore(){
 
     let V = document.getElementById('V_partitore').value;
     let R1 = document.getElementById('R1').value;
     let R2 = document.getElementById('R2').value;
 
-    let Vr = (R1 /(R1+R2)) * V;
+    let sommaTemp = R1 + R2;
+
+    let di
+
     
-    document.getElementById('partitore').innerHTML
+    document.getElementById('partitore').innerHTML = Vr + ' ' + 'V';
 
 }
 
