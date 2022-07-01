@@ -130,18 +130,27 @@ function Corrente(){
 
 }
 
-function Partitore(){
+function Partitore_Tensione(){
 
     let V = document.getElementById('V_partitore').value;
     let R1 = document.getElementById('R1').value;
     let R2 = document.getElementById('R2').value;
 
-    let sommaTemp = R1 + R2;
-
-    let di
-
+    let VR = (R1/(parseFloat(R1) + parseFloat(R2)))*V;
     
-    document.getElementById('partitore').innerHTML = Vr + ' ' + 'V';
+    document.getElementById('partitore_tensione').innerHTML = VR + ' ' + 'V';
+
+}
+
+function Partitore_Corrente(){
+
+    let I = document.getElementById('I_partitore').value;
+    let R1 = document.getElementById('R1-').value;
+    let R2 = document.getElementById('R2-').value;
+
+    let IR = (R1/(parseFloat(R1) + parseFloat(R2)))*I;
+    
+    document.getElementById('partitore_corrente').innerHTML = IR + ' ' + 'A';
 
 }
 
