@@ -112,10 +112,21 @@ function Tensione(){
 
     let VeTemp = (R*Ia);
 
-    let Ve = (VeTemp) +  parseInt(Va);
+    let Ve = (VeTemp) +  parseFloat(Va);
 
     document.getElementById('quanta_tensione').innerHTML = Ve + ' ' + 'V';
 
+}
+
+function Corrente(){
+    
+    let Ve = document.getElementById('Ve2').value;
+    let R = document.getElementById('Rlohm4').value;
+    let Ia = document.getElementById('Ia2').value;
+
+    let Ie = (Ve/R) + parseFloat(Ia);
+
+    document.getElementById('quanta_corrente').innerHTML = Ie + ' ' + "A";
 
 }
 
