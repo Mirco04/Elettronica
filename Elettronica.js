@@ -154,4 +154,39 @@ function Partitore_Corrente(){
 
 }
 
+function Resistore_Serie(){
+    let R1 = document.getElementById('R1--').value;
+    let R2 = document.getElementById('R2--').value;
+
+    let Rserie = parseFloat(R1) + parseFloat(R2);
+
+    if(Rserie>= 1000){
+        document.getElementById('Rserie').innerHTML = (Rserie/1000) + ' ' + 'KΩ';
+    }else{
+        document.getElementById('Rserie').innerHTML = Rserie + ' ' + 'Ω';
+    }
+
+    
+
+}
+
+function Resistore_Parallelo(){
+    let R1 = document.getElementById('R1---').value;
+    let R2 = document.getElementById('R2---').value;
+
+    let Rparallelo = (parseFloat(R1) * parseFloat(R2))/(parseFloat(R1) + parseFloat(R2));
+
+    if(Rparallelo>=1000){
+
+        document.getElementById('Rparallelo').innerHTML = (Rparallelo/1000) + ' ' + 'KΩ';
+        
+    }else{
+
+        document.getElementById('Rparallelo').innerHTML = Rparallelo + ' ' + 'Ω';
+
+    }
+
+   
+
+}
 
